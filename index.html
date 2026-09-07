@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08060c">
+  <meta name="description" content="Um pequeno jardim feito para duas pessoas.">
+  <title>Nosso Jardim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="stars"></div>
+  <div class="fog fog-a"></div>
+  <div class="fog fog-b"></div>
+
+  <header class="hero">
+    <div class="hero-kicker">UM PRESENTE FEITO À MÃO</div>
+    <h1>Nosso <span>Jardim</span></h1>
+    <p>Algumas coisas precisam de tempo para florescer.</p>
+    <div class="hero-line"><i></i><span>✦</span><i></i></div>
+    <p class="hero-instruction">
+      Escolha uma flor, cuide dela e descubra o que existe por trás de cada pétala.
+    </p>
+  </header>
+
+  <main>
+    <section class="garden-intro">
+      <div>
+        <span class="eyebrow">O JARDIM</span>
+        <h2>Cinco sementes. Cinco histórias.</h2>
+      </div>
+      <div class="garden-stats">
+        <div><strong id="totalPoints">0</strong><small>pontos</small></div>
+        <div><strong id="grownCount">0/5</strong><small>flores</small></div>
+      </div>
+    </section>
+
+    <section class="garden-grid" id="gardenGrid" aria-label="Flores do jardim"></section>
+
+    <section class="final-section locked" id="finalSection">
+      <div class="final-symbol">✦</div>
+      <span class="eyebrow">O ÚLTIMO SEGREDO</span>
+      <h2>Quando todas florescerem...</h2>
+      <p>Há uma última mensagem esperando por você.</p>
+      <button class="primary-button" id="finalButton" disabled>Desbloquear</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito com carinho, um pouco de código e muitas intenções bonitas.</p>
+    <span>♡</span>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+      <div class="modal-character-wrap">
+        <img id="modalCharacter" src="" alt="Personagem da flor">
+      </div>
+      <div class="modal-copy">
+        <span class="eyebrow" id="modalEyebrow">UMA MENSAGEM</span>
+        <h2 id="modalTitle">...</h2>
+        <p id="modalMessage">...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
